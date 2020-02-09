@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="pos_control_world">
+
+    <!-- 环境光 -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- 地面 -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    
+    <!-- A testing model -->
+    <model name='pos_control_model'>
+      <include>
+        <uri>model://pos_control_model</uri>
+      </include>
+  
+      <joint name="fixed to ground" type="fixed">
+        <parent>world</parent>
+        <child>pos_control_model::link_0</child>
+      </joint>
+ 
+      <!-- Attach the plugin to this model -->
+      <plugin name="position_controller" filename="libposition_controller.so">
+        <jointname>joint_0</jointname>
+        <!-- PID gain for controller -->
+        <p_gain>1e3</p_gain>
+        <i_gain>0.0</i_gain>
+        <d_gain>10.0</d_gain>
+
+      </plugin>
+    </model>
+  </world>
+</sdf>
