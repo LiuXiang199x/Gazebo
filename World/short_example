@@ -1,0 +1,31 @@
+<sdf version='1.6'>
+  <world name='default'>
+    <model name='ground_plane'>
+      定义地面环境
+    </model>
+    <light name='sun' type='directional'>
+      定义环境光照
+    </light>
+    <gui fullscreen='0'>
+      定义界面参数，如用户相机视角的相关参数
+    </gui>
+    <gravity> 定义重力加速度 </gravity>
+    <magnetic_field> 定义磁场 </magnetic_field>
+    <atmosphere type='adiabatic'/> 定义大气环境
+    <physics name='default_physics' default='0' type='ode'>
+      定义物理参数，主要是仿真求解参数
+    </physics>
+    <scene>
+      定义场景参数，包括环境、背景、阴影等
+    </scene>
+    <spherical_coordinates>
+      定义球坐标系，包括类型、海拔、经度、纬度、航向角等（作用暂未知）
+    </spherical_coordinates>
+    <model name='unit_box'>
+      自定义机器人或物体模型
+    </model>
+    <state world_name='default'>
+      定义世界状态，包括仿真时间、真实时间、墙上时间以及各模型的位姿参数等
+    </state>
+  </world>
+</sdf>
