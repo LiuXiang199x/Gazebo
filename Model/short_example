@@ -1,0 +1,17 @@
+<model name='unit_box'>
+  <pose frame=''>0.357849 -0.310577 0.5 0 -0 0</pose>
+  <link name='link'>
+    <inertial>
+      惯性参数，包括质量、惯量等
+    </inertial>
+    <collision name='collision'>
+      碰撞参数，用于碰撞检测
+    </collision>
+    <visual name='visual'>
+      可视化参数，用于显示
+    </visual>
+    <self_collide>是否检测自碰撞</self_collide>
+    <enable_wind>是否受到风的影响</enable_wind>
+    <kinematic>运动学</kinematic>
+  </link>
+</model>
